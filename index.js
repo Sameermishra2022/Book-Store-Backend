@@ -1,10 +1,13 @@
 import express from "express"
-import {PORT , mongodbURL} from './config.js'
+// import {PORT , mongodbURL} from './config.js'
 import mongoose from "mongoose";
 import bookRoute from './BookRoute/bookRoute.js'
 import cors from 'cors'
 
 const app = express();
+
+const PORT = process.env.PORT || 5000;
+const mongodbURL = process.env.mongoDBURL;
 
 app.use(express.json());
 
